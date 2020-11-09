@@ -18,26 +18,38 @@
       color: yellow;
       font-size: 4rem;
       text-align: center;
+      margin-top:0;
     }
     ul {
       text-align: center;
+      margin:0;
+      padding:0 ;
     }
+
     li {
       position: relative;
       display: block;
-      width: 30%;
-      background: orange:
+      width: 31%;
       float: left;
       font-size: 2rem;
       list-style-type: none;
-      float: left;
       height: 28rem;
-      margin: 1%;
+      margin: 0 1% 1% 0;
       border: solid 2px black;
       opacity: 0.3;
     }
     li:hover {
       opacity: 1;
+    }
+    @media (max-width: 640px) {
+      li {
+      width:100%;
+      }
+    }
+    @media (max-width: 960px) {
+      li {
+      width:48.1%;
+      }
     }
     h2 {
       background: black;
