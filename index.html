@@ -13,9 +13,20 @@
       background: yellow;
       font-size: 1rem;
     }
+    a:link, a:hover, a:visited, a:active {
+      text-decoration:none;
+      color: black;
+    }
     h1 {
       background: black;
       color: yellow;
+      font-size: 4rem;
+      text-align: center;
+      margin:0;
+    }
+    h1:nth-of-type(2n) {
+      background: yellow;
+      color: black;
       font-size: 4rem;
       text-align: center;
       margin-top:0;
@@ -29,14 +40,15 @@
     li {
       position: relative;
       display: block;
-      width: 31%;
+      width: 31.5%;
       float: left;
       font-size: 2rem;
       list-style-type: none;
-      height: 28rem;
+      height: 32rem;
       margin: 0 1% 1% 0;
       border: solid 2px black;
-      opacity: 0.3;
+      opacity: 0.5;
+      overflow: hidden;
     }
     li:hover {
       opacity: 1;
@@ -65,14 +77,47 @@
     h4 {
       background: black;
       color: yellow;
-      font-size: 8rem;
-      line-height: 10rem;
-      height: 10rem;
+      height: 14rem;
       margin: 0%;
-      position: absolute;
-      bottom:0;
+      position:absolute;
+      bottom: 0;
       left: 0;
       right: 0;
+    }
+    #z2 h4:nth-of-type(2n) {
+      animation: fos 12s infinite;
+      transition: opacity 0s;
+    }
+    @keyframes fos {
+      0% {opacity: 0;}
+      50% {opacity: 1;}
+      100% {opacity: 0;}
+    }
+    p {
+      margin-top:0;
+      text-align: center;
+      font-size:2rem;
+    }
+    .dia {
+      margin:0;
+      height: 2rem;
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+    .data {
+      margin:0;
+      height: 4rem;
+      font-size: 8rem;
+      line-height: 8rem;
+    }
+    .hora {
+      margin:4rem 0 0 0;
+      height: 2rem;
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+    .hora:nth-of-type(2n) {
+      margin:0;
     }
     img {
       width: 100%;
@@ -85,46 +130,95 @@
 </head>
 <body>
   <h1>Assemblees Docents COVID</h1>
+  <h1>BAIX LLOBREGAT</h1>
+  <p>Cerca la teva zona i fes clic per entrar a la reunió</p>
   <ul>
-    <li id="z1">
-      <h2>Zona 1</h2>
-      <h3>Cornellà</h3>
-      <h3>Esplugues</h3>
-      <h3>Sant Joan</h3>
-      <h4>22N</h4>
-    </li>
-    <li id="z2">
-      <h2>Zona 2</h2>
-      <h3>Castelldefels</h3>
-      <h3>Gavà - Viladecans - Begues - St. Climent</h3>
-      <h3>Sant Boi - Santa Coloma</h3>
-      <h4>---</h4>
-    </li>
-    <li id="z3">
-      <h2>Zona 3</h2>
-      <h3>Molins</h3>
-      <h3>St Just</h3>
-      <h3>St Feliu</h3>
-      <h3>St Vicenç</h3>
-      <h4>---</h4>
-    </li>
-    <li id="z4">
-      <h2>Zona 4</h2>
-      <h3>St Andreu</h3>
-      <h3>Martorell</h3>
-      <h3></h3>
-      <h4>---</h4>
-    </li>
-    <li id="z5">
-      <h2>Zona 5</h2>
-      <h3>El Prat</h3>
-      <h3></h3>
-      <h3></h3>
-      <h4>---</h4>
-    </li>
-    <li id="z6">
-      <img src="baix.svg" alt="">
-    </li>
+    <a href="https://meet.jit.si/zona-baixllobregat">
+      <li id="z1">
+        <h2>Zona 1</h2>
+        <h3>Cornellà</h3>
+        <h3>Esplugues</h3>
+        <h3>St Joan</h3>
+        <h4>
+          <p class="dia">Divendres</p>
+          <p class="data">20N</p>
+          <p class="hora">1r torn 12:45h</p>
+          <p class="hora">2n torn 16:00h</p>
+        </h4>
+      </li>
+    </a>
+    <a href="https://meet.jit.si/zona-baixllobregat">
+      <li id="z2">
+        <h2>Zona 2</h2>
+        <h3>Castelldefels - Gavà</h3>
+        <h3>Viladecans - St Boi</h3>
+        <h3>Begues, St Climent, Sta Coloma</h3>
+        <h4>
+          <p class="dia">Dimarts</p>
+          <p class="data">24N</p>
+          <p class="hora">1r torn 18:00h</p>
+        </h4>
+        <h4>
+          <p class="dia">Dimecres</p>
+          <p class="data">25N</p>
+          <p class="hora">2n torn 12:45h</p>
+        </h4>
+      </li>
+    </a>
+    <a href="https://meet.jit.si/AssembleazonaSantVicençdelsHortsMolins">
+      <li id="z3">
+        <h2>Zona 3</h2>
+        <h3>Molins</h3>
+        <h3>St Vicenç</h3>
+        <h3 class="mini">Cervelló, Corbera, El Papiol, La Palma, Pallejà, Torrelles, Vallirana</h3>
+        <h3></h3>
+        <h4>
+          <p class="dia">Dimarts</p>
+          <p class="data">1D</p>
+          <p class="hora">1r torn 18:00h</p>
+        </h4>
+      </li>
+    </a>
+    <a href="https://meet.jit.si/zona-baixllobregat">
+      <li id="z4">
+        <h2>Zona 4</h2>
+        <h3>St Andreu</h3>
+        <h3>Martorell</h3>
+        <h3 class="mini">Abrera, Esparreguera, Castellví, Olesa, St Esteve</h3>
+        <h4>
+          <p class="dia">Dijous</p>
+          <p class="data">26N</p>
+          <p class="hora">1r torn 12:45h</p>
+        </h4>
+      </li>
+    </a>
+    <a href="https://meet.jit.si/zona-baixllobregat">
+      <li id="z5">
+        <h2>Zona 5</h2>
+        <h3>El Prat</h3>
+        <h3>St Feliu</h3>
+        <h3>St Just</h3>
+        <h4>
+          <p class="dia">Dilluns</p>
+          <p class="data">30N</p>
+          <p class="hora">1r torn 12:45h</p>
+        </h4>
+      </li>
+    </a>
+    <a href="https://meet.jit.si/zona-baixllobregat">
+      <li id="comarcal">
+        <h2>Totes les zones</h2>
+        <h3>Assemblea Comarcal</h3>
+        <h4>
+          <p class="dia">Dijous</p>
+          <p class="data">03D</p>
+          <p class="hora">1r torn 12:45h</p>
+        </h4>
+      </li>
+    </a>
   </ul>
+  <footer>
+
+  </footer>
 </body>
 </html>
